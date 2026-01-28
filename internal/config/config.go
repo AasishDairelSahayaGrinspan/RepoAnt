@@ -6,7 +6,7 @@ import (
 	"path/filepath"
 )
 
-const configFileName = ".reposweep-token"
+const configFileName = ".repoant-token"
 
 func getConfigPath() (string, error) {
 	home, err := os.UserHomeDir()

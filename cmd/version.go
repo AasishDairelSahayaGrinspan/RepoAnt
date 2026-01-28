@@ -3,12 +3,12 @@ package cmd
 import (
 	"fmt"
 
-	"gitsafe-rm/internal/ui"
+	"repoant/internal/ui"
 
 	"github.com/spf13/cobra"
 )
 
-var Version = "1.0.0"
+var Version = "0.1"
 
 var versionCmd = &cobra.Command{
 	Use:   "version",
@@ -17,7 +17,7 @@ var versionCmd = &cobra.Command{
 		ui.PrintBanner()
 		ui.Primary.Printf("  Version: ")
 		ui.White.Printf("%s\n", Version)
-		ui.Muted.Printf("  Built with ❤️  using Go + Cobra\n")
+		ui.Muted.Printf("  by @aasishdairel\n")
 		fmt.Println()
 	},
 }

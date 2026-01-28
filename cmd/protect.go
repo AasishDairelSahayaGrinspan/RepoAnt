@@ -7,8 +7,8 @@ import (
 	"path/filepath"
 	"strings"
 
-	"gitsafe-rm/internal/protected"
-	"gitsafe-rm/internal/ui"
+	"repoant/internal/protected"
+	"repoant/internal/ui"
 
 	"github.com/AlecAivazis/survey/v2"
 	"github.com/spf13/cobra"
@@ -20,14 +20,14 @@ var protectCmd = &cobra.Command{
 	Run: func(cmd *cobra.Command, args []string) {
 		ui.PrintBanner()
 		ui.PrintHeader("Protected Repositories")
-		ui.PrintInfo("Protected repos cannot be deleted with safe-rm")
+		ui.PrintInfo("Protected repos cannot be deleted with repoant")
 		fmt.Println()
 
 		protectedRepos, _ := protected.LoadProtectedRepos()
 
 		if len(protectedRepos) == 0 {
 			ui.PrintWarning("No protected repositories configured")
-			ui.PrintHint("Use 'safe-rm protect add <owner/repo>' to add one")
+			ui.PrintHint("Use 'repoant protect add <owner/repo>' to add one")
 		} else {
 			ui.PrintCount(len(protectedRepos), "protected repository", "protected repositories")
 			for repo := range protectedRepos {
@@ -115,7 +115,7 @@ var protectRemoveCmd = &cobra.Command{
 
 		fmt.Println()
 		ui.PrintSuccess("Removed '%s' from protected list", repoName)
-		ui.PrintWarning("This repository can now be deleted with safe-rm")
+		ui.PrintWarning("This repository can now be deleted with repoant")
 		fmt.Println()
 		return nil
 	},

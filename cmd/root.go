@@ -3,15 +3,15 @@ package cmd
 import (
 	"os"
 
-	"gitsafe-rm/internal/ui"
+	"repoant/internal/ui"
 
 	"github.com/spf13/cobra"
 )
 
 var rootCmd = &cobra.Command{
-	Use:   "reposweep",
-	Short: "Safely delete GitHub repositories",
-	Long:  "A CLI tool for safely deleting GitHub repositories with interactive selection and protection lists.",
+	Use:   "repoant",
+	Short: "Delete and mass delete GitHub repositories with a single click",
+	Long:  "🐜 RepoAnt - A CLI tool for deleting GitHub repositories. Select one or multiple repos and delete them with a single confirmation.",
 	Run: func(cmd *cobra.Command, args []string) {
 		ui.PrintBanner()
 		cmd.Help()

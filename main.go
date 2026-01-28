@@ -1,6 +1,6 @@
 package main
 
-import "gitsafe-rm/cmd"
+import "repoant/cmd"
 
 func main() {
 	cmd.Execute()

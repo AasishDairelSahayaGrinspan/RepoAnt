@@ -4,16 +4,15 @@ import (
 	"fmt"
 	"os"
 
-	"gitsafe-rm/internal/config"
-	"gitsafe-rm/internal/github"
-	"gitsafe-rm/internal/protected"
-	"gitsafe-rm/internal/ui"
+	"repoant/internal/config"
+	"repoant/internal/github"
+	"repoant/internal/protected"
+	"repoant/internal/ui"
 
 	"github.com/AlecAivazis/survey/v2"
 	"github.com/spf13/cobra"
 )
 
-var dryRun bool
 var multiDelete bool
 
 var deleteCmd = &cobra.Command{
@@ -32,7 +31,7 @@ var deleteCmd = &cobra.Command{
 		token, err := config.LoadToken()
 		if err != nil {
 			ui.PrintError("Not logged in")
-			ui.PrintHint("Run 'safe-rm login' first")
+			ui.PrintHint("Run 'repoant login' first")
 			fmt.Println()
 			return err
 		}
@@ -59,7 +58,7 @@ var deleteCmd = &cobra.Command{
 			ui.PrintHint("Create a new token with 'delete_repo' scope at:")
 			ui.Cyan.Println("  https://github.com/settings/tokens")
 			fmt.Println()
-			ui.PrintHint("Then run: ./safe-rm login")
+			ui.PrintHint("Then run: repoant login")
 			fmt.Println()
 			return fmt.Errorf("token missing delete_repo scope")
 		}
@@ -113,12 +112,6 @@ var deleteCmd = &cobra.Command{
 		}
 		ui.PrintInfo("Available to delete: %d", len(repoNames))
 		fmt.Println()
-
-		if dryRun {
-			ui.Accent.Println("  🔍 DRY-RUN MODE ENABLED")
-			ui.Muted.Println("     No repositories will actually be deleted")
-			fmt.Println()
-		}
 
 		// Multi-select or single-select based on flag
 		if multiDelete {

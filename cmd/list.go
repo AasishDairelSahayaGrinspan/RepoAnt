@@ -3,9 +3,9 @@ package cmd
 import (
 	"fmt"
 
-	"gitsafe-rm/internal/config"
-	"gitsafe-rm/internal/github"
-	"gitsafe-rm/internal/ui"
+	"repoant/internal/config"
+	"repoant/internal/github"
+	"repoant/internal/ui"
 
 	"github.com/spf13/cobra"
 )
@@ -48,7 +48,7 @@ var listCmd = &cobra.Command{
 		}
 
 		fmt.Println()
-		ui.PrintHint("Run 'safe-rm delete' to interactively delete a repository")
+		ui.PrintHint("Run 'repoant delete' to interactively delete a repository")
 		fmt.Println()
 		return nil
 	},

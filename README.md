@@ -1,26 +1,45 @@
-# RepoSweep
+# 🐜 RepoAnt
 
-A CLI tool for safely deleting GitHub repositories with interactive selection and protection lists.
+A CLI tool for deleting GitHub repositories - select one or multiple repos and delete them with a single confirmation.
 
 ## Features
 
-- 🎨 **Colorful TUI**: Beautiful, modern terminal interface with colors and emojis
+- 🎨 **Modern UI**: Sleek terminal interface with gradient colors
 - 🔍 **Interactive selection**: Browse and select repositories using arrow keys
 - 🔒 **Protected repos**: Configure repositories that can never be deleted
 - 🔐 **Secure token storage**: GitHub PAT stored locally with restricted permissions
 - ⚠️ **Safety warnings**: Clear warnings and confirmation prompts before deletion
-- 📦 **Multi-delete**: Option to delete multiple repositories at once with extra safeguards
+- 📦 **Mass delete**: Delete multiple repositories at once with extra safeguards
 
 ## Installation
+
+RepoAnt works on **Windows**, **Linux**, and **macOS**.
+
+### macOS / Linux
 
 ```bash
 # Build from source
 go mod tidy
-go build -o reposweep .
+go build -o repoant .
 
-# Move to PATH (optional)
-sudo mv reposweep /usr/local/bin/
+# Install globally (optional)
+sudo mv repoant /usr/local/bin/
 ```
+
+### Windows
+
+```bash
+# Build from source
+go mod tidy
+go build -o repoant.exe .
+
+# Add to PATH (optional)
+# Move repoant.exe to a directory in your PATH
+```
+
+### Pre-built Binaries
+
+Download pre-built binaries from the releases page (coming soon).
 
 ## Usage
 
@@ -29,7 +48,7 @@ sudo mv reposweep /usr/local/bin/
 Store your GitHub Personal Access Token (requires `repo` and `delete_repo` scopes):
 
 ```bash
-./reposweep login
+repoant login
 ```
 
 ### List Repositories
@@ -37,7 +56,7 @@ Store your GitHub Personal Access Token (requires `repo` and `delete_repo` scope
 View all your GitHub repositories:
 
 ```bash
-./reposweep list
+repoant list
 ```
 
 ### Delete Repository (Single)
@@ -45,7 +64,7 @@ View all your GitHub repositories:
 Interactively select and delete ONE repository:
 
 ```bash
-./reposweep delete
+repoant delete
 ```
 
 **Navigation:**
@@ -58,9 +77,9 @@ Interactively select and delete ONE repository:
 Select and delete multiple repositories at once:
 
 ```bash
-./reposweep delete --multi
+repoant delete --multi
 # or
-./reposweep delete -m
+repoant delete -m
 ```
 
 **Navigation:**
@@ -75,24 +94,24 @@ Select and delete multiple repositories at once:
 
 View protected repositories:
 ```bash
-./reposweep protect
+repoant protect
 ```
 
 Add a repository to the protected list:
 ```bash
-./reposweep protect add owner/repo
+repoant protect add owner/repo
 ```
 
 Remove a repository from the protected list:
 ```bash
-./reposweep protect remove owner/repo
+repoant protect remove owner/repo
 ```
 
 ### Version
 
 Check the CLI version:
 ```bash
-./reposweep version
+repoant version
 ```
 
 ## Protected Repositories
@@ -113,12 +132,12 @@ The CLI requires a GitHub Personal Access Token with the following scopes:
 
 Create a token at: https://github.com/settings/tokens
 
-The token is stored at `~/.reposweep-token` with `0600` permissions (readable only by you).
+The token is stored at `~/.repoant-token` with `0600` permissions (readable only by you).
 
 ## Project Structure
 
 ```
-reposweep/
+repoant/
 ├── main.go                          # Entry point
 ├── go.mod                           # Go module definition
 ├── cmd/
@@ -140,6 +159,26 @@ reposweep/
 └── .protected-repos.example         # Example protected repos file
 ```
 
+## Author
+
+by @aasishdairel
+
 ## License
 
 MIT
+
+## Cross-Platform Compatibility
+
+RepoAnt is built with Go and works seamlessly on:
+
+- **macOS** (Intel and Apple Silicon)
+- **Linux** (x86_64, ARM64)
+- **Windows** (x86_64)
+
+The application uses cross-platform libraries for:
+- Terminal UI interactions
+- File system operations
+- Color output
+- HTTP requests
+
+All features work identically across platforms.

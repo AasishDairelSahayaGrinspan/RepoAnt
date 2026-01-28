@@ -3,8 +3,8 @@ package cmd
 import (
 	"fmt"
 
-	"gitsafe-rm/internal/config"
-	"gitsafe-rm/internal/ui"
+	"repoant/internal/config"
+	"repoant/internal/ui"
 
 	"github.com/AlecAivazis/survey/v2"
 	"github.com/spf13/cobra"
@@ -41,7 +41,7 @@ var loginCmd = &cobra.Command{
 
 		fmt.Println()
 		ui.PrintSuccess("Token saved successfully!")
-		ui.PrintHint("Run 'reposweep list' to see your repositories")
+		ui.PrintHint("Run 'repoant list' to see your repositories")
 		fmt.Println()
 		return nil
 	},

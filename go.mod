@@ -1,4 +1,4 @@
-module gitsafe-rm
+module repoant
 
 go 1.21
 

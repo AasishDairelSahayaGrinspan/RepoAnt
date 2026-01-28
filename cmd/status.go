@@ -3,9 +3,9 @@ package cmd
 import (
 	"fmt"
 
-	"gitsafe-rm/internal/config"
-	"gitsafe-rm/internal/github"
-	"gitsafe-rm/internal/ui"
+	"repoant/internal/config"
+	"repoant/internal/github"
+	"repoant/internal/ui"
 
 	"github.com/spf13/cobra"
 )
@@ -20,7 +20,7 @@ var statusCmd = &cobra.Command{
 		token, err := config.LoadToken()
 		if err != nil {
 			ui.PrintError("Not logged in")
-			ui.PrintHint("Run 'safe-rm login' first")
+			ui.PrintHint("Run 'repoant login' first")
 			fmt.Println()
 			return
 		}
@@ -57,7 +57,7 @@ var statusCmd = &cobra.Command{
 			ui.PrintHint("Create a new token with 'delete_repo' scope at:")
 			ui.Cyan.Println("  https://github.com/settings/tokens")
 			fmt.Println()
-			ui.PrintHint("Then run: ./safe-rm login")
+			ui.PrintHint("Then run: repoant login")
 		}
 		fmt.Println()
 	},
