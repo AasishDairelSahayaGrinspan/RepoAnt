@@ -1,0 +1,7 @@
+# Protected repositories (one per line, format: owner/repo)
+# These repos will never appear in the delete list
+# Copy this file to ~/.protected-repos and add your repos
+#
+# Example:
+# myusername/important-repo
+# myusername/production-app
