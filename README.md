@@ -39,7 +39,7 @@ go build -o repoant.exe .
 
 ### Pre-built Binaries
 
-Download pre-built binaries from the releases page (coming soon).
+Download pre-built binaries from the releases page.
 
 ## Usage
 

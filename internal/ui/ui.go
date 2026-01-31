@@ -76,6 +76,7 @@ func PrintBanner() {
 		"      /     \\",
 		"",
 		"  🐜 delete and mass delete github repo hassle free",
+		"  by @aasishdairel",
 		"",
 	}
 

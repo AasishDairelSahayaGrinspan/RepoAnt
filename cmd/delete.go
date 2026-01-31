@@ -23,7 +23,7 @@ var deleteCmd = &cobra.Command{
 
 		// Safety warning banner
 		ui.Warning.Println("  ╔════════════════════════════════════════════════════════╗")
-		ui.Warning.Println("  ║  ⚠️  WARNING: This will PERMANENTLY delete repository   ║")
+		ui.Warning.Println("  ║  ⚠️  WARNING: This will PERMANENTLY delete repository  ║")
 		ui.Warning.Println("  ║  This action CANNOT be undone!                         ║")
 		ui.Warning.Println("  ╚════════════════════════════════════════════════════════╝")
 		fmt.Println()
@@ -49,7 +49,7 @@ var deleteCmd = &cobra.Command{
 		if !hasDeleteScope {
 			fmt.Println()
 			ui.Error.Println("  ╔════════════════════════════════════════════════════════╗")
-			ui.Error.Println("  ║  ❌ TOKEN MISSING 'delete_repo' SCOPE                   ║")
+			ui.Error.Println("  ║  ❌ TOKEN MISSING 'delete_repo' SCOPE                  ║")
 			ui.Error.Println("  ╚════════════════════════════════════════════════════════╝")
 			fmt.Println()
 			ui.PrintError("Your token does not have permission to delete repositories")
@@ -147,9 +147,9 @@ func handleSingleDelete(repoNames []string, repoMap map[string]github.Repository
 	fmt.Println()
 	ui.PrintHeader("Deletion Summary")
 	ui.Warning.Println("  ┌─────────────────────────────────────┐")
-	ui.Warning.Printf("  │  Repository: %-22s │\n", repo.Name)
-	ui.Warning.Printf("  │  Owner:      %-22s │\n", repo.Owner)
-	ui.Warning.Printf("  │  Full name:  %-22s │\n", repo.FullName)
+	ui.Warning.Printf("   │  Repository: %-22s │\n", repo.Name)
+	ui.Warning.Printf("   │  Owner:      %-22s │\n", repo.Owner)
+	ui.Warning.Printf("   │  Full name:  %-22s │\n", repo.FullName)
 	ui.Warning.Println("  │  Count:      1 repository           │")
 	ui.Warning.Println("  └─────────────────────────────────────┘")
 	fmt.Println()
