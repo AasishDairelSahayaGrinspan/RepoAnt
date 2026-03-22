@@ -8,25 +8,25 @@ import (
 )
 
 var (
-	// Modern color palette
-	Primary   = color.New(color.FgHiCyan, color.Bold)
-	Secondary = color.New(color.FgHiBlue)
-	Accent    = color.New(color.FgHiBlue, color.Bold)
+	// RepoAnt palette: danger-forward reds with amber highlights.
+	Primary   = color.New(color.FgHiRed, color.Bold)
+	Secondary = color.New(color.FgHiWhite)
+	Accent    = color.New(color.FgHiYellow, color.Bold)
 	Highlight = color.New(color.FgHiWhite, color.Bold)
 
-	// Status colors - more subtle
+	// Status colors
 	Success = color.New(color.FgGreen, color.Bold)
 	Warning = color.New(color.FgYellow, color.Bold)
 	Error   = color.New(color.FgRed, color.Bold)
-	Info    = color.New(color.FgBlue)
+	Info    = color.New(color.FgCyan)
 
 	// Text colors
 	Muted   = color.New(color.FgHiBlack)
 	Bold    = color.New(color.Bold)
 	Dim     = color.New(color.Faint)
-	Cyan    = color.New(color.FgCyan)
+	Cyan    = color.New(color.FgHiCyan)
 	Magenta = color.New(color.FgMagenta)
-	White   = color.New(color.FgWhite)
+	White   = color.New(color.FgHiWhite)
 )
 
 const logo = `
@@ -54,14 +54,14 @@ const smallLogo = `
 `
 
 func PrintBanner() {
-	// Red gradient with ant theme
+	// Warm gradient with ant theme
 	gradient := []color.Attribute{
 		color.FgHiRed,
 		color.FgRed,
-		color.FgHiRed,
+		color.FgHiYellow,
 		color.FgRed,
 		color.FgHiRed,
-		color.FgRed,
+		color.FgHiYellow,
 	}
 
 	lines := []string{
