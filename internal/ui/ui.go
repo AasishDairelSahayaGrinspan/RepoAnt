@@ -83,7 +83,7 @@ func PrintBanner() {
 	fmt.Println()
 	for i, line := range lines {
 		if i >= 1 && i <= 6 { // Logo lines with ant
-			c := color.New(gradient[i-1%len(gradient)], color.Bold)
+			c := color.New(gradient[(i-1)%len(gradient)], color.Bold)
 			c.Println(line)
 		} else { // Ant and tagline
 			if strings.Contains(line, "🐜") {
@@ -139,7 +139,6 @@ func PrintRepoSimple(name string) {
 	Cyan.Print("  📦 ")
 	White.Println(name)
 }
-
 
 func PrintDeleting(name string) {
 	fmt.Println()

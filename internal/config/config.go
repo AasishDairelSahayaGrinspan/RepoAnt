@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
+	"strings"
 )
 
 const configFileName = ".repoant-token"
@@ -37,5 +38,9 @@ func LoadToken() (string, error) {
 		}
 		return "", err
 	}
-	return string(data), nil
+	token := strings.TrimSpace(string(data))
+	if token == "" {
+		return "", fmt.Errorf("token is empty")
+	}
+	return token, nil
 }

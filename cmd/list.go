@@ -19,7 +19,7 @@ var listCmd = &cobra.Command{
 		token, err := config.LoadToken()
 		if err != nil {
 			ui.PrintError("Not logged in")
-			ui.PrintHint("Run 'safe-rm login' first")
+			ui.PrintHint("Run 'repoant login' first")
 			fmt.Println()
 			return err
 		}

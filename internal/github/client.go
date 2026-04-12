@@ -85,24 +85,30 @@ func (c *Client) ListRepositories() ([]Repository, error) {
 		if err != nil {
 			return nil, err
 		}
-		defer resp.Body.Close()
 
 		if resp.StatusCode == 401 {
+			resp.Body.Close()
 			return nil, fmt.Errorf("unauthorized: invalid or expired token")
 		}
 
 		if resp.StatusCode == 403 {
+			resp.Body.Close()
 			return nil, fmt.Errorf("forbidden: rate limit exceeded or insufficient permissions")
 		}
 
 		if resp.StatusCode != 200 {
 			body, _ := io.ReadAll(resp.Body)
+			resp.Body.Close()
 			return nil, fmt.Errorf("API error (%d): %s", resp.StatusCode, string(body))
 		}
 
 		var repos []repoResponse
 		if err := json.NewDecoder(resp.Body).Decode(&repos); err != nil {
+			resp.Body.Close()
 			return nil, fmt.Errorf("failed to parse response: %w", err)
+		}
+		if err := resp.Body.Close(); err != nil {
+			return nil, fmt.Errorf("failed to close response body: %w", err)
 		}
 
 		if len(repos) == 0 {
