@@ -1,0 +1,64 @@
+version: 2
+
+project_name: repoant
+
+builds:
+  - id: repoant
+    main: ./main.go
+    binary: repoant
+    env:
+      - CGO_ENABLED=0
+    goos:
+      - darwin
+      - linux
+      - windows
+    goarch:
+      - amd64
+      - arm64
+    ignore:
+      - goos: linux
+        goarch: arm64
+      - goos: windows
+        goarch: arm64
+    ldflags:
+      - -s -w -X repoant/cmd.Version={{ .Version }}
+
+archives:
+  - id: default
+    ids:
+      - repoant
+    name_template: repoant_{{ .Os }}_{{ .Arch }}
+    formats:
+      - tar.gz
+    format_overrides:
+      - goos: windows
+        formats:
+          - zip
+
+checksum:
+  name_template: checksums.txt
+  algorithm: sha256
+
+changelog:
+  use: git
+
+brews:
+  - name: repoant
+    ids:
+      - repoant
+    repository:
+      owner: AasishDairelSahayaGrinspan
+      name: homebrew-repoant
+      branch: main
+      token: "{{ .Env.HOMEBREW_TAP_GITHUB_TOKEN }}"
+    directory: Formula
+    homepage: https://github.com/AasishDairelSahayaGrinspan/RepoAnt
+    description: Delete and mass delete GitHub repositories interactively
+    license: MIT
+    install: |
+      bin.install "repoant"
+    test: |
+      system "#{bin}/repoant", "version"
+    commit_author:
+      name: github-actions[bot]
+      email: 41898282+github-actions[bot]@users.noreply.github.com

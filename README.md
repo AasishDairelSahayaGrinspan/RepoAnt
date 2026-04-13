@@ -15,6 +15,19 @@ A CLI tool for deleting GitHub repositories - select one or multiple repos and d
 
 RepoAnt works on **Windows**, **Linux**, and **macOS**.
 
+### Homebrew (macOS / Linux)
+
+```bash
+brew install AasishDairelSahayaGrinspan/repoant/repoant
+```
+
+Alternative (two-step):
+
+```bash
+brew tap AasishDairelSahayaGrinspan/repoant
+brew install repoant
+```
+
 ### macOS / Linux
 
 ```bash
