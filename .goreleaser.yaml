@@ -2,6 +2,12 @@ version: 2
 
 project_name: repoant
 
+git:
+  tag_sort: -creatordate
+  ignore_tags:
+    - ver0.2
+    - ver0.3
+
 builds:
   - id: repoant
     main: ./main.go
