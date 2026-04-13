@@ -51,7 +51,7 @@ changelog:
 brews:
   - name: repoant
     ids:
-      - repoant
+      - default
     repository:
       owner: AasishDairelSahayaGrinspan
       name: homebrew-repoant
