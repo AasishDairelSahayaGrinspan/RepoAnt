@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">RepoAnt Single Delete Scenario</title>
+  <desc id="desc">Terminal screenshot simulation of interactive single repository deletion with confirmation.</desc>
+  <rect width="1200" height="720" fill="#f4e8d1"/>
+  <rect x="86" y="72" width="1028" height="576" rx="22" fill="#0f2117" stroke="#3f614b" stroke-width="4"/>
+  <text x="124" y="120" fill="#9fe18e" font-size="26" font-family="IBM Plex Mono, monospace">repoant delete</text>
+  <text x="124" y="182" fill="#c5eed2" font-size="22" font-family="IBM Plex Mono, monospace">Use arrows and press Enter:</text>
+  <text x="124" y="230" fill="#6ecf7f" font-size="22" font-family="IBM Plex Mono, monospace">&gt; aasishdairel/tmp-sandbox</text>
+  <text x="124" y="270" fill="#d7f3dd" font-size="22" font-family="IBM Plex Mono, monospace">  aasishdairel/internal-prototype</text>
+  <text x="124" y="328" fill="#f6c483" font-size="22" font-family="IBM Plex Mono, monospace">WARNING: this delete is irreversible.</text>
+  <text x="124" y="376" fill="#f9dfab" font-size="22" font-family="IBM Plex Mono, monospace">Confirm delete aasishdairel/tmp-sandbox? (y/N)</text>
+  <text x="124" y="424" fill="#a8d2b7" font-size="22" font-family="IBM Plex Mono, monospace">Canceled safely.</text>
+</svg>

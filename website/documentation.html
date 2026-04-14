@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RepoAnt Documentation | Setup, Commands, Scenarios, and Deployment</title>
+    <meta
+      name="description"
+      content="Complete RepoAnt documentation for setup, command usage, scenario simulations, media updates, and GitHub Pages deployment."
+    />
+    <meta
+      name="keywords"
+      content="RepoAnt documentation, RepoAnt commands, GitHub repo cleanup CLI, GitHub Pages deployment, RepoAnt scenarios"
+    />
+    <meta property="og:title" content="RepoAnt Documentation" />
+    <meta
+      property="og:description"
+      content="Read full RepoAnt documentation including install, command reference, scenario playbooks, and deployment troubleshooting."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://aasishdairelsahayagrinspan.github.io/RepoAnt/documentation.html"
+    />
+    <link
+      rel="canonical"
+      href="https://aasishdairelsahayagrinspan.github.io/RepoAnt/documentation.html"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-owner="AasishDairelSahayaGrinspan" data-repo="repoant">
+    <div class="bg-orb orb-a" aria-hidden="true"></div>
+    <div class="bg-orb orb-b" aria-hidden="true"></div>
+
+    <header class="topbar">
+      <a class="brand" href="index.html">RepoAnt</a>
+      <div class="repo-actions">
+        <a class="ghost-btn" href="index.html#showcase">Screenshots</a>
+        <a class="ghost-btn" href="features.html">Features</a>
+        <a id="repo-link" class="ghost-btn" href="#" target="_blank" rel="noreferrer">
+          View on GitHub
+        </a>
+        <a id="star-link" class="star-btn" href="#" target="_blank" rel="noreferrer">
+          <span class="star-icon" aria-hidden="true">★</span>
+          <span>Stars</span>
+          <span id="star-count" class="count-pill">...</span>
+        </a>
+      </div>
+    </header>
+
+    <main class="docs-main">
+      <section class="deep-hero reveal">
+        <p class="eyebrow">Documentation</p>
+        <h1>Everything needed to run, market, and publish RepoAnt.</h1>
+        <p class="lead">
+          This documentation covers installation, command reference, scenario simulation assets,
+          and GitHub Pages deployment operations.
+        </p>
+      </section>
+
+      <section class="docs-grid reveal" aria-label="RepoAnt documentation sections">
+        <article class="docs-card">
+          <h2>Setup and install</h2>
+          <ol>
+            <li>Install with Homebrew: brew tap AasishDairelSahayaGrinspan/repoant && brew install repoant.</li>
+            <li>Authenticate once: repoant login.</li>
+            <li>Verify with: repoant list.</li>
+          </ol>
+        </article>
+
+        <article class="docs-card">
+          <h2>Command reference</h2>
+          <ul>
+            <li>repoant login: stores GitHub token with 0600 permissions.</li>
+            <li>repoant list: lists repositories available to your token.</li>
+            <li>repoant delete: interactive single repository delete.</li>
+            <li>repoant delete --multi: multi-select delete with DELETE count confirmation.</li>
+            <li>repoant protect add owner/repo: prevents accidental deletion.</li>
+            <li>repoant protect remove owner/repo: removes from protected list.</li>
+          </ul>
+        </article>
+
+        <article class="docs-card">
+          <h2>Scenario simulation pack</h2>
+          <ul>
+            <li>assets/scenario-login.svg: first-time login and token save.</li>
+            <li>assets/scenario-list.svg: repository inventory before cleanup.</li>
+            <li>assets/scenario-single-delete.svg: single-delete confirmation.</li>
+            <li>assets/repoant-screenshot.svg: multi-delete with typed confirmation.</li>
+            <li>assets/scenario-protected.svg: protected repositories excluded.</li>
+            <li>assets/scenario-token-missing.svg: missing token recovery guidance.</li>
+          </ul>
+        </article>
+
+        <article class="docs-card">
+          <h2>Media update workflow</h2>
+          <ol>
+            <li>Record a real CLI flow for login, list, and delete cases.</li>
+            <li>Export to GIF and replace assets/repoant-demo.gif.</li>
+            <li>Keep screenshots at consistent aspect ratio for visual polish.</li>
+            <li>Update captions in index.html if scenario wording changes.</li>
+          </ol>
+        </article>
+
+        <article class="docs-card">
+          <h2>GitHub Pages deployment</h2>
+          <ol>
+            <li>Push to main branch.</li>
+            <li>Workflow .github/workflows/pages.yml publishes website/.</li>
+            <li>Public URL: https://aasishdairelsahayagrinspan.github.io/RepoAnt/.</li>
+            <li>If first deploy, set Pages source to GitHub Actions in repository settings.</li>
+          </ol>
+        </article>
+
+        <article class="docs-card">
+          <h2>Troubleshooting</h2>
+          <ul>
+            <li>404 on Pages: confirm URL casing uses /RepoAnt/ exactly.</li>
+            <li>Star count not loading: check GitHub API rate limits or network access.</li>
+            <li>No deployment: verify workflow permissions for pages and id-token.</li>
+            <li>Blank GIF area: ensure repoant-demo.gif exists in website/assets/.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="docs-note reveal">
+        <strong>Operational note:</strong>
+        This documentation page is designed to support both users and maintainers so marketing
+        content and deployment steps stay in sync.
+      </section>
+    </main>
+
+    <footer class="reveal">
+      <p>RepoAnt • Documentation • MIT License</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

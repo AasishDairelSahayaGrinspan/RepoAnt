@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">RepoAnt Missing Token Scenario</title>
+  <desc id="desc">Terminal screenshot simulation of missing token error and recovery instruction.</desc>
+  <rect width="1200" height="720" fill="#f4e8d1"/>
+  <rect x="86" y="72" width="1028" height="576" rx="22" fill="#0f2117" stroke="#3f614b" stroke-width="4"/>
+  <text x="124" y="120" fill="#9fe18e" font-size="26" font-family="IBM Plex Mono, monospace">repoant delete</text>
+  <text x="124" y="186" fill="#f8968f" font-size="24" font-family="IBM Plex Mono, monospace">Error: token not found</text>
+  <text x="124" y="244" fill="#f9dfab" font-size="22" font-family="IBM Plex Mono, monospace">Run repoant login to authenticate first.</text>
+  <text x="124" y="292" fill="#d7f3dd" font-size="22" font-family="IBM Plex Mono, monospace">Token path: ~/.repoant-token</text>
+  <text x="124" y="340" fill="#a8d2b7" font-size="22" font-family="IBM Plex Mono, monospace">Permission target: 0600</text>
+</svg>

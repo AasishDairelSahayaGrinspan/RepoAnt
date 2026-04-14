@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">RepoAnt Protected Repo Scenario</title>
+  <desc id="desc">Terminal screenshot simulation showing protected repositories excluded from delete selection.</desc>
+  <rect width="1200" height="720" fill="#f4e8d1"/>
+  <rect x="86" y="72" width="1028" height="576" rx="22" fill="#0f2117" stroke="#3f614b" stroke-width="4"/>
+  <text x="124" y="120" fill="#9fe18e" font-size="26" font-family="IBM Plex Mono, monospace">repoant protect</text>
+  <text x="124" y="182" fill="#c5eed2" font-size="22" font-family="IBM Plex Mono, monospace">Protected repositories:</text>
+  <text x="124" y="228" fill="#f9dfab" font-size="22" font-family="IBM Plex Mono, monospace">- aasishdairel/repoant</text>
+  <text x="124" y="268" fill="#f9dfab" font-size="22" font-family="IBM Plex Mono, monospace">- aasishdairel/production-api</text>
+  <text x="124" y="320" fill="#6ecf7f" font-size="22" font-family="IBM Plex Mono, monospace">repoant delete --multi</text>
+  <text x="124" y="364" fill="#d7f3dd" font-size="22" font-family="IBM Plex Mono, monospace">Skipping 2 protected repositories.</text>
+  <text x="124" y="404" fill="#a8d2b7" font-size="22" font-family="IBM Plex Mono, monospace">Only deletable repositories are shown in selector.</text>
+</svg>

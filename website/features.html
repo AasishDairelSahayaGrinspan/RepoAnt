@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RepoAnt Features Deep Dive | Safe GitHub Repository Deletion CLI</title>
+    <meta
+      name="description"
+      content="Deep dive into RepoAnt features: safe multi-delete, protected repositories, secure token handling, and cross-platform support."
+    />
+    <meta
+      name="keywords"
+      content="RepoAnt, GitHub repository deletion, delete repositories CLI, protected repositories, safe GitHub cleanup, Go CLI"
+    />
+    <meta property="og:title" content="RepoAnt Features Deep Dive" />
+    <meta
+      property="og:description"
+      content="Learn how RepoAnt helps developers clean up GitHub repositories safely with protection rules and deliberate confirmations."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://aasishdairelsahayagrinspan.github.io/RepoAnt/features.html" />
+    <link
+      rel="canonical"
+      href="https://aasishdairelsahayagrinspan.github.io/RepoAnt/features.html"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "RepoAnt",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "macOS, Linux, Windows",
+        "codeRepository": "https://github.com/AasishDairelSahayaGrinspan/repoant",
+        "license": "https://opensource.org/license/mit/",
+        "description": "RepoAnt is a safety-first CLI for listing, protecting, and deleting GitHub repositories.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      }
+    </script>
+  </head>
+  <body data-owner="AasishDairelSahayaGrinspan" data-repo="repoant">
+    <div class="bg-orb orb-a" aria-hidden="true"></div>
+    <div class="bg-orb orb-b" aria-hidden="true"></div>
+
+    <header class="topbar">
+      <a class="brand" href="index.html">RepoAnt</a>
+      <div class="repo-actions">
+        <a class="ghost-btn" href="index.html#showcase">Screenshot and GIF</a>
+        <a class="ghost-btn" href="documentation.html">Documentation</a>
+        <a id="repo-link" class="ghost-btn" href="#" target="_blank" rel="noreferrer">
+          View on GitHub
+        </a>
+        <a id="star-link" class="star-btn" href="#" target="_blank" rel="noreferrer">
+          <span class="star-icon" aria-hidden="true">★</span>
+          <span>Stars</span>
+          <span id="star-count" class="count-pill">...</span>
+        </a>
+      </div>
+    </header>
+
+    <main class="deep-main">
+      <section class="deep-hero reveal">
+        <p class="eyebrow">Features deep dive</p>
+        <h1>RepoAnt helps teams delete repositories fast while preserving what matters.</h1>
+        <p class="lead">
+          This page explains how RepoAnt balances speed and caution when working with irreversible
+          actions in GitHub.
+        </p>
+      </section>
+
+      <section class="feature-clusters reveal" aria-label="RepoAnt feature clusters">
+        <article class="cluster-card">
+          <h2>Deletion workflows</h2>
+          <ul>
+            <li>Single-delete mode for focused cleanup tasks.</li>
+            <li>Multi-delete mode for batch operations on stale repositories.</li>
+            <li>Typed confirmation gates for high-impact actions.</li>
+            <li>Clear cancellation paths using standard terminal controls.</li>
+          </ul>
+        </article>
+
+        <article class="cluster-card">
+          <h2>Safety controls</h2>
+          <ul>
+            <li>Protected repositories are excluded from delete lists.</li>
+            <li>Warnings and prompts reduce accidental destructive actions.</li>
+            <li>Predictable command behavior that is easy to audit.</li>
+            <li>Designed for deliberate, explicit repository removal.</li>
+          </ul>
+        </article>
+
+        <article class="cluster-card">
+          <h2>Security model</h2>
+          <ul>
+            <li>Personal Access Token stored as a local file with 0600 permissions.</li>
+            <li>No external token vault dependency required for solo workflows.</li>
+            <li>Simple local configuration that is easy to inspect and reset.</li>
+            <li>Token is never embedded in command history by default workflows.</li>
+          </ul>
+        </article>
+
+        <article class="cluster-card">
+          <h2>Platform coverage</h2>
+          <ul>
+            <li>Runs on macOS, Linux, and Windows.</li>
+            <li>Homebrew installation path for macOS and Linux users.</li>
+            <li>Source build path for custom setups and CI environments.</li>
+            <li>Portable usage style that fits standard terminal habits.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="faq reveal" aria-label="Frequently asked questions">
+        <h2>FAQ</h2>
+        <div class="faq-item">
+          <h3>What token scopes does RepoAnt require?</h3>
+          <p>Use a GitHub Personal Access Token with repo and delete_repo scopes.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Can I prevent critical repositories from being deleted?</h3>
+          <p>
+            Yes. Add repositories to the protected list and they will not appear in deletion
+            selections.
+          </p>
+        </div>
+        <div class="faq-item">
+          <h3>Is RepoAnt suitable for batch cleanups?</h3>
+          <p>
+            Yes. Multi-delete mode is designed for bulk cleanup, with confirmation text that includes
+            repository count before execution.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="reveal">
+      <p>RepoAnt • Feature deep dive • MIT License</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

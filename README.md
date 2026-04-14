@@ -54,6 +54,58 @@ go build -o repoant.exe .
 
 Download pre-built binaries from the releases page.
 
+## Website (Marketing Page)
+
+A repo-style marketing site is included in `website/`.
+
+Included pages:
+
+- `website/index.html` - Landing page with live star count and scenario simulation gallery
+- `website/features.html` - SEO-focused features deep dive page
+- `website/documentation.html` - Full documentation for setup, commands, scenarios, and deployment
+
+Maintainer guide:
+
+- `docs/website-marketing-and-deployment.md` - Plan, operations, and troubleshooting
+
+### Preview locally
+
+```bash
+cd website
+python3 -m http.server 8080
+```
+
+Then open `http://localhost:8080` in your browser.
+
+The page fetches live GitHub stars from:
+
+`https://api.github.com/repos/AasishDairelSahayaGrinspan/repoant`
+
+### Media assets
+
+- Scenario screenshots:
+	- `website/assets/scenario-login.svg`
+	- `website/assets/scenario-list.svg`
+	- `website/assets/scenario-single-delete.svg`
+	- `website/assets/repoant-screenshot.svg` (multi-delete)
+	- `website/assets/scenario-protected.svg`
+	- `website/assets/scenario-token-missing.svg`
+- GIF slot: `website/assets/repoant-demo.gif`
+
+Replace `repoant-demo.gif` with a real terminal recording GIF for production marketing.
+
+### GitHub Pages deployment
+
+GitHub Pages is wired using `.github/workflows/pages.yml`.
+
+Deployment behavior:
+
+- Triggers on pushes to `main`
+- Publishes the `website/` directory
+- Serves at `https://aasishdairelsahayagrinspan.github.io/RepoAnt/`
+
+If this is the first deployment, ensure repository Settings -> Pages uses `GitHub Actions` as the build source.
+
 ## Usage
 
 ### Login

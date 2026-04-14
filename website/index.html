@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RepoAnt | Delete GitHub Repositories Safely</title>
+    <meta
+      name="description"
+      content="RepoAnt is a safety-first CLI for listing, protecting, and deleting GitHub repositories with confidence."
+    />
+    <meta
+      name="keywords"
+      content="RepoAnt, GitHub repository deletion, delete GitHub repos, safe cleanup CLI, protected repositories"
+    />
+    <meta property="og:title" content="RepoAnt | Delete GitHub Repositories Safely" />
+    <meta
+      property="og:description"
+      content="A safety-first CLI for repository cleanup with protected lists and explicit confirmation flows."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://aasishdairelsahayagrinspan.github.io/RepoAnt/" />
+    <link rel="canonical" href="https://aasishdairelsahayagrinspan.github.io/RepoAnt/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-owner="AasishDairelSahayaGrinspan" data-repo="repoant">
+    <div class="bg-orb orb-a" aria-hidden="true"></div>
+    <div class="bg-orb orb-b" aria-hidden="true"></div>
+
+    <header class="topbar">
+      <a class="brand" href="index.html">RepoAnt</a>
+      <div class="repo-actions">
+        <a class="ghost-btn" href="features.html">Features Deep Dive</a>
+        <a class="ghost-btn" href="documentation.html">Documentation</a>
+        <a
+          id="repo-link"
+          class="ghost-btn"
+          href="https://github.com/AasishDairelSahayaGrinspan/repoant"
+          target="_blank"
+          rel="noreferrer"
+        >
+          View on GitHub
+        </a>
+        <a id="star-link" class="star-btn" href="#" target="_blank" rel="noreferrer">
+          <span class="star-icon" aria-hidden="true">★</span>
+          <span>Stars</span>
+          <span id="star-count" class="count-pill">...</span>
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero reveal">
+        <p class="eyebrow">Safety-first GitHub cleanup</p>
+        <h1>Delete old repos fast, without deleting the wrong one.</h1>
+        <p class="lead">
+          RepoAnt is a focused CLI for developers who need to clean GitHub repositories in bulk,
+          with protection rules and confirmation flows that keep critical repos safe.
+        </p>
+        <div class="hero-cta">
+          <a
+            class="primary-btn"
+            href="https://github.com/AasishDairelSahayaGrinspan/repoant"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Explore Repository
+          </a>
+          <a class="secondary-btn" href="#quickstart">See Quick Start</a>
+        </div>
+      </section>
+
+      <section class="repo-shell reveal">
+        <div class="repo-shell-header">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <p>AasishDairelSahayaGrinspan / repoant</p>
+        </div>
+        <div class="repo-shell-tabs">
+          <button class="active" type="button">Code</button>
+          <button type="button">Issues</button>
+          <button type="button">Pull requests</button>
+          <button type="button">Actions</button>
+        </div>
+        <div class="repo-grid">
+          <article>
+            <h3>Why teams pick RepoAnt</h3>
+            <ul>
+              <li>Interactive selection for single or multi-delete workflows</li>
+              <li>Protected repository list to prevent irreversible mistakes</li>
+              <li>Strong confirmation prompts for high-risk actions</li>
+            </ul>
+          </article>
+          <article>
+            <h3>Built for confidence</h3>
+            <ul>
+              <li>Stores token locally with restricted 0600 permissions</li>
+              <li>Works on macOS, Linux, and Windows</li>
+              <li>Uses simple commands that fit into existing terminal habits</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="showcase" class="showcase reveal">
+        <h2>Screenshot and GIF Preview</h2>
+        <p>
+          Use this section to market the real interface before users install. It simulates the
+          main CLI scenarios users care about before running destructive commands.
+        </p>
+
+        <div class="media-featured">
+          <figure class="media-card media-card-large">
+            <img
+              src="assets/repoant-demo.gif"
+              alt="RepoAnt terminal GIF demo"
+              loading="lazy"
+            />
+            <figcaption>
+              RepoAnt terminal GIF demo. Replace this placeholder with a recorded end-to-end flow.
+            </figcaption>
+          </figure>
+          <div class="scenario-list" aria-label="Simulated scenarios covered">
+            <h3>Simulated scenarios covered</h3>
+            <ul>
+              <li>First login and token save</li>
+              <li>Repository listing before cleanup</li>
+              <li>Single delete with confirmation</li>
+              <li>Multi-delete with typed DELETE count</li>
+              <li>Protected repository skip behavior</li>
+              <li>Missing token recovery message</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="scenario-grid" aria-label="RepoAnt scenario screenshots">
+          <figure class="media-card">
+            <img
+              src="assets/scenario-login.svg"
+              alt="RepoAnt login scenario screenshot"
+              loading="lazy"
+            />
+            <figcaption>Scenario: login and secure token storage.</figcaption>
+          </figure>
+          <figure class="media-card">
+            <img
+              src="assets/scenario-list.svg"
+              alt="RepoAnt list repositories scenario screenshot"
+              loading="lazy"
+            />
+            <figcaption>Scenario: list repositories before deletion.</figcaption>
+          </figure>
+          <figure class="media-card">
+            <img
+              src="assets/scenario-single-delete.svg"
+              alt="RepoAnt single-delete scenario screenshot"
+              loading="lazy"
+            />
+            <figcaption>Scenario: single-delete with warning and confirmation.</figcaption>
+          </figure>
+          <figure class="media-card">
+            <img
+              src="assets/repoant-screenshot.svg"
+              alt="RepoAnt terminal screenshot showing safe multi-delete confirmation"
+              loading="lazy"
+            />
+            <figcaption>Scenario: multi-delete confirmation flow.</figcaption>
+          </figure>
+          <figure class="media-card">
+            <img
+              src="assets/scenario-protected.svg"
+              alt="RepoAnt protected repository scenario screenshot"
+              loading="lazy"
+            />
+            <figcaption>Scenario: protected repositories excluded from delete mode.</figcaption>
+          </figure>
+          <figure class="media-card">
+            <img
+              src="assets/scenario-token-missing.svg"
+              alt="RepoAnt missing token scenario screenshot"
+              loading="lazy"
+            />
+            <figcaption>Scenario: missing token guidance and recovery path.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="quickstart" class="quickstart reveal">
+        <h2>Quick Start</h2>
+        <p>Install and run in less than two minutes.</p>
+        <div class="commands">
+          <div class="command-card">
+            <h4>Install</h4>
+            <pre><code>brew tap AasishDairelSahayaGrinspan/repoant
+brew install repoant</code></pre>
+          </div>
+          <div class="command-card">
+            <h4>Authenticate</h4>
+            <pre><code>repoant login</code></pre>
+          </div>
+          <div class="command-card">
+            <h4>Delete safely</h4>
+            <pre><code>repoant delete --multi</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section class="seo-cta reveal">
+        <h2>Need the full feature breakdown?</h2>
+        <p>
+          Read the SEO-focused deep dive page that explains RepoAnt workflows, safety model,
+          and platform support in detail.
+        </p>
+        <div class="cta-row">
+          <a class="primary-btn" href="features.html">Read Features Deep Dive</a>
+          <a class="secondary-btn" href="documentation.html">Read Full Documentation</a>
+        </div>
+      </section>
+
+      <section class="docs-hub reveal">
+        <h2>Documentation</h2>
+        <p>
+          Documentation now includes setup, command reference, scenario playbooks, media update
+          instructions, and GitHub Pages deployment troubleshooting.
+        </p>
+        <a class="primary-btn" href="documentation.html">Open Documentation</a>
+      </section>
+    </main>
+
+    <footer class="reveal">
+      <p>RepoAnt • MIT License • Built by @aasishdairel</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

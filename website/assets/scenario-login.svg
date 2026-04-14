@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">RepoAnt Login Scenario</title>
+  <desc id="desc">Terminal screenshot simulation of RepoAnt login command and token save confirmation.</desc>
+  <rect width="1200" height="720" fill="#f4e8d1"/>
+  <rect x="86" y="72" width="1028" height="576" rx="22" fill="#0f2117" stroke="#3f614b" stroke-width="4"/>
+  <text x="124" y="120" fill="#9fe18e" font-size="26" font-family="IBM Plex Mono, monospace">repoant login</text>
+  <text x="124" y="182" fill="#c5eed2" font-size="24" font-family="IBM Plex Mono, monospace">Enter GitHub Personal Access Token:</text>
+  <text x="124" y="236" fill="#6ecf7f" font-size="24" font-family="IBM Plex Mono, monospace">Token saved to ~/.repoant-token (0600)</text>
+  <text x="124" y="290" fill="#f6c483" font-size="24" font-family="IBM Plex Mono, monospace">Scopes required: repo, delete_repo</text>
+  <text x="124" y="352" fill="#a8d2b7" font-size="22" font-family="IBM Plex Mono, monospace">Ready. Run: repoant list</text>
+</svg>
